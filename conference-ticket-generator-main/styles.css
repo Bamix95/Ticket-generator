@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+svg,
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Inconsolata", sans-serif;
+  background: url("../assets/images/background-desktop.png") no-repeat
+      center/cover,
+    url("../assets/images/pattern-squiggly-line-top.svg") no-repeat top left /
+      contain;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  height: 100%;
+  animation: fadeOut 1s ease-in-out;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+header {
+  text-align: center;
+  padding-block: 30px;
+}
+.logo_wrapper {
+  margin-bottom: 28px;
+}
+.header_text h1 {
+  font-size: 48px;
+  color: white;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.header_text p {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+.form {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form_control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+}
+.form_label {
+  color: white;
+  font-size: 20px;
+}
+.file_input_wrapper {
+  height: 120px;
+  width: 100%;
+  border: 2px dashed hsl(245, 15%, 58%);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-block: 12px;
+}
+
+.file_label {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(245, 19%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.instruction {
+  color: white;
+  font-weight: 400;
+}
+.file_err {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 400;
+}
+.btns {
+  width: 80px;
+  background-color: hsl(245, 19%, 35%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding-block: 6px;
+  color: white;
+  font-size: 11px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: text-decoration 0.5s ease-in-out;
+  border-radius: 5px;
+}
+.btns:hover {
+  text-decoration: underline;
+}
+.btns_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.email,
+.github,
+.fullname {
+  height: 38px;
+  border-radius: 8px;
+  background-color: hsl(245, 19%, 30%);
+  border: 1px solid hsl(245, 15%, 58%);
+  padding-left: 16px;
+  color: white;
+  font-family: "Inconsolata";
+}
+.github::placeholder {
+  color: white;
+  font-size: 14px;
+  font-family: "Inconsolata";
+  font-weight: 400;
+}
+.email::placeholder {
+  color: white;
+  font-size: 14px;
+  font-family: "Inconsolata";
+  font-weight: 400;
+}
+
+.fullname:focus {
+  outline: 2px solid hsl(245, 15%, 58%);
+  outline-offset: 2px;
+  border: 1px solid hsl(245, 15%, 58%);
+}
+.github:focus {
+  outline: 2px solid hsl(245, 15%, 58%);
+  outline-offset: 2px;
+  border: 1px solid hsl(245, 15%, 58%);
+}
+.email:focus {
+  outline: 2px solid hsl(245, 15%, 58%);
+  outline-offset: 2px;
+  border: 1px solid hsl(245, 15%, 58%);
+}
+.submit_btn {
+  width: 100%;
+  border: none;
+  height: 38px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: hsl(248, 70%, 10%);
+  font-weight: 800;
+  font-family: "Inconsolata";
+  outline: none;
+  cursor: pointer;
+  background: hsl(7, 88%, 67%);
+  transition: background 0.5s ease-in-out;
+}
+.submit_btn:hover {
+  background: hsl(7, 71%, 60%);
+}
+.error {
+  color: hsl(7, 71%, 60%);
+  font-size: 11px;
+}
+.err_border {
+  border: 1px solid hsl(7, 71%, 60%);
+}
+.success_page {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  padding-block: 30px;
+  height: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.section_header {
+  text-align: center;
+}
+.congrat_wrapper {
+  margin-top: 26px;
+}
+.congrat_wrapper h1 {
+  font-size: 38px;
+  color: white;
+}
+.congrat_wrapper p {
+  width: 300px;
+  margin: 0 auto;
+  color: hsl(252, 6%, 83%);
+  line-height: 1.5;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+.sucess_email,
+.username {
+  background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.success_card {
+  background: url("../assets/images/pattern-ticket.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 16px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+.success_title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.success_image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.user_details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.user_wrapper p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+}
+.user_wrapper h1 {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+}
+.conf_date {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.conf_date h1 {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+.conf_date p {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+@media (max-width: 425px) {
+  .success_card {
+    background: url("../assets/images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    min-height: 200px;
+  }
+  .success_page {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    padding-block: 30px;
+    height: 100%;
+    padding-inline: 12px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .congrat_wrapper h1 {
+    font-size: 30px;
+    color: white;
+  }
+  .conf_date h1 {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+  }
+  .user_wrapper h1 {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+  }
+  .success_image {
+    max-width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  success-logo {
+    max-width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .container {
+    padding-inline: 16px;
+  }
+  .header_text h1 {
+    font-size: 32px;
+    color: white;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+}
